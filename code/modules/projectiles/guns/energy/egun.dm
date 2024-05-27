@@ -9,7 +9,7 @@
 	fire_delay = 10 // To balance for the fact that it is a pistol and can be used one-handed without penalty
 	fire_sound = 'sound/weapons/gunshot/lasdoot.ogg'
 	projectile_type = /obj/item/projectile/beam/stun
-	origin_tech = "{'combat':3,'magnets':2}"
+	origin_tech = @'{"combat":3,"magnets":2}'
 	indicator_color = COLOR_CYAN
 
 	firemodes = list(
@@ -38,14 +38,3 @@
 	self_recharge = 1
 	use_external_power = 1
 	has_safety = FALSE
-
-/obj/item/gun/energy/gun/reloadable
-	name = "reloadable energy gun"
-	desc = "Another bestseller of Lawson Arms and the FTU, the LAEP90 Perun is a versatile energy based sidearm, capable of switching between low, medium and high power projectile settings. In other words: stun, shock or kill."
-	power_supply = null
-	accepts_cell_type = /obj/item/cell/gun
-
-/obj/item/gun/energy/gun/small/reloadable
-	name = "reloadable small energy gun"
-	power_supply = null
-	accepts_cell_type = /obj/item/cell/gun
