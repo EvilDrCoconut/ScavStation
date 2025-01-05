@@ -61,6 +61,20 @@
 	sound_env = ROOM
 	turf_initializer = /decl/turf_initializer/spiderwebs
 
+/area/valSal_port/town/house
+	name = "\improper House"
+	fishing_failure_prob = 100
+	fishing_results = list()
+	sound_env = ROOM
+	turf_initializer = /decl/turf_initializer/spiderwebs
+
+/area/valSal_port/town/mansion
+	name = "\improper House"
+	fishing_failure_prob = 100
+	fishing_results = list()
+	sound_env = ROOM
+	turf_initializer = /decl/turf_initializer/spiderwebs
+
 /area/valSal_port/town/farmhouse
 	name = "\improper Farmhouse"
 	fishing_failure_prob = 100
@@ -87,7 +101,7 @@
 	sound_env = ROOM
 	turf_initializer = /decl/turf_initializer/spiderwebs
 
-	/area/valSal_port/town/shrine
+/area/valSal_port/town/shrine
 	name = "\improper Shrine"
 	fishing_failure_prob = 100
 	fishing_results = list()

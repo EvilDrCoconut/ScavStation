@@ -86,8 +86,8 @@
 
 
 /datum/level_data/player_level/valSal_port/enclave
-	name = "Shaded Hills - Swamp"
-	level_id = "valSal_port_swamp"
+	name = "ValSalian Port - Enclave"
+	level_id = "valSal_port_enclave"
 	connected_levels = list(
 		"valSal_port_town" = SOUTH
 	)
