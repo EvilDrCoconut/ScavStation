@@ -10,7 +10,6 @@
 	#include "../../mods/content/fantasy/_fantasy.dme"
 
 	#include "areas/_areas.dm"
-	#include "areas/downlands.dm"
 	#include "areas/grassland.dm"
 	#include "areas/swamp.dm"
 	#include "areas/woods.dm"
