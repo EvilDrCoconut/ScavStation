@@ -1,6 +1,7 @@
 /area/valSal_port/town/sea
 	name = "Val Salian Port Bay"
-		additional_fishing_results = list(
+
+	additional_fishing_results = list(
 		/mob/living/simple_animal/aquatic/fish               = 10,
 		/obj/item/mollusc/clam/fished/pearl                  = 3,
 		/obj/item/trash/mollusc_shell/clam                   = 1,

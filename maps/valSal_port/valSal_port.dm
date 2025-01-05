@@ -14,6 +14,7 @@
 	#include "areas/grassland.dm"
 	#include "areas/swamp.dm"
 	#include "areas/woods.dm"
+	#include "areas/town.dm"
 
 	#include "jobs/_jobs.dm"
 	#include "jobs/caves.dm"
@@ -53,15 +54,9 @@
 	#include "valSal_port_testing.dm"
 	#include "valSal_port_turfs.dm"
 
-	// Caverns are below grassland and must be compiled in that order for multiz.
-	#include "valSal_port-caverns.dmm"
-	#include "valSal_port-grassland.dmm"
-	// Dungeon is under inn and must be compiled in that order for multiz.
-	#include "valSal_port-dungeon.dmm"
-	#include "valSal_port-inn.dmm"
 	// Other levels are lateral and compile order doesn't matter.
-	#include "valSal_port-swamp.dmm"
-	#include "valSal_port-woods.dmm"
+	#include "valSal_port-town.dmm"
+	#include "valSal_port-enclave.dmm"
 
 	#define USING_MAP_DATUM /datum/map/valSal_port
 

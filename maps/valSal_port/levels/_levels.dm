@@ -55,18 +55,16 @@
 					mob_count--
 					CHECK_TICK
 
-/datum/level_data/player_level/valSal_port/grassland
-	name = "Shaded Hills - Grassland"
-	level_id = "valSal_port_grassland"
+/datum/level_data/player_level/valSal_port/town
+	name = "ValSalian Port - Town"
+	level_id = "valSal_port_town"
 	level_generators = list(
 		/datum/random_map/automata/cave_system/valSal_port,
 		/datum/random_map/noise/ore/poor,
 		/datum/random_map/noise/forage/valSal_port/grassland
 	)
 	connected_levels = list(
-		"valSal_port_woods"     = NORTH,
-		"valSal_port_swamp"     = SOUTH,
-		"valSal_port_downlands" = EAST
+		"valSal_port_enclave"     = NORTH,
 	)
 	submap_budget = 5
 	submap_category = MAP_TEMPLATE_CATEGORY_SH_GRASSLAND
@@ -87,11 +85,11 @@
 	)
 
 
-/datum/level_data/player_level/valSal_port/swamp
+/datum/level_data/player_level/valSal_port/enclave
 	name = "Shaded Hills - Swamp"
 	level_id = "valSal_port_swamp"
 	connected_levels = list(
-		"valSal_port_grassland" = NORTH
+		"valSal_port_town" = SOUTH
 	)
 	level_generators = list(
 		/datum/random_map/noise/valSal_port/swamp,
@@ -128,95 +126,8 @@
 		)
 	)
 
-/datum/level_data/player_level/valSal_port/woods
-	name = "Shaded Hills - Woods"
-	level_id = "valSal_port_woods"
-	connected_levels = list(
-		"valSal_port_grassland" = SOUTH
-	)
-	level_generators = list(
-		/datum/random_map/noise/valSal_port/woods,
-		/datum/random_map/noise/forage/valSal_port/woods
-	)
-	submap_budget = 5
-	submap_category = MAP_TEMPLATE_CATEGORY_SH_WOODS
-	submap_area = /area/valSal_port/outside/woods/poi
+/obj/abstract/level_data_spawner/valSal_port_town
+	level_data_type = /datum/level_data/player_level/valSal_port/town
 
-	mobs_to_spawn = list(
-		list(
-			list(
-				/mob/living/simple_animal/passive/mouse        = 6,
-				/mob/living/simple_animal/passive/rabbit       = 2,
-				/mob/living/simple_animal/passive/rabbit/brown = 2,
-				/mob/living/simple_animal/passive/rabbit/black = 2,
-				/mob/living/simple_animal/opossum              = 2
-			),
-			/turf/floor/grass,
-			10
-		),
-		list(
-			list(
-				/mob/living/simple_animal/passive/deer         = 1
-			),
-			/turf/floor/grass,
-			5
-		)
-	)
-
-/datum/level_data/player_level/valSal_port/downlands
-	name = "Shaded Hills - Downlands"
-	level_id = "valSal_port_downlands"
-	level_generators = list(
-		/datum/random_map/noise/valSal_port/woods,
-		/datum/random_map/noise/forage/valSal_port/grassland
-	)
-	connected_levels = list(
-		"valSal_port_grassland" = WEST
-	)
-	submap_budget = 5
-	submap_category = MAP_TEMPLATE_CATEGORY_SH_DOWNLANDS
-	submap_area = /area/valSal_port/outside/downlands/poi
-
-/datum/level_data/player_level/valSal_port/caverns
-	name = "Shaded Hills - Caverns"
-	level_id = "valSal_port_caverns"
-	connected_levels = list(
-		"valSal_port_dungeon" = EAST
-	)
-	submap_budget = 5
-	submap_category = MAP_TEMPLATE_CATEGORY_SH_CAVERNS
-	submap_area = /area/valSal_port/caves/deep/poi
-	level_generators = list(
-		/datum/random_map/automata/cave_system/valSal_port,
-		/datum/random_map/noise/ore/rich
-	)
-	base_turf = /turf/floor/rock/basalt
-
-/datum/level_data/player_level/valSal_port/dungeon
-	name = "Shaded Hills - Dungeon"
-	level_id = "valSal_port_dungeon"
-	connected_levels = list(
-		"valSal_port_caverns" = WEST
-	)
-	submap_budget = 5
-	submap_category = MAP_TEMPLATE_CATEGORY_SH_DUNGEON
-	submap_area = /area/valSal_port/caves/dungeon/poi
-	base_turf = /turf/floor/rock/basalt
-
-/obj/abstract/level_data_spawner/valSal_port_grassland
-	level_data_type = /datum/level_data/player_level/valSal_port/grassland
-
-/obj/abstract/level_data_spawner/valSal_port_swamp
-	level_data_type = /datum/level_data/player_level/valSal_port/swamp
-
-/obj/abstract/level_data_spawner/valSal_port_woods
-	level_data_type = /datum/level_data/player_level/valSal_port/woods
-
-/obj/abstract/level_data_spawner/valSal_port_downlands
-	level_data_type = /datum/level_data/player_level/valSal_port/downlands
-
-/obj/abstract/level_data_spawner/valSal_port_caverns
-	level_data_type = /datum/level_data/player_level/valSal_port/caverns
-
-/obj/abstract/level_data_spawner/valSal_port_dungeon
-	level_data_type = /datum/level_data/player_level/valSal_port/dungeon
+/obj/abstract/level_data_spawner/valSal_port_enclave
+	level_data_type = /datum/level_data/player_level/valSal_port/enclave
