@@ -10,9 +10,8 @@
 	#include "../../mods/content/fantasy/_fantasy.dme"
 
 	#include "areas/_areas.dm"
-	#include "areas/grassland.dm"
-	#include "areas/swamp.dm"
-	#include "areas/woods.dm"
+	#include "areas/caverns.dm"
+	#include "areas/enclave.dm"
 	#include "areas/town.dm"
 
 	#include "jobs/_jobs.dm"
@@ -56,6 +55,7 @@
 	// Other levels are lateral and compile order doesn't matter.
 	#include "valSal_port-town.dmm"
 	#include "valSal_port-enclave.dmm"
+	#include "valSal_port-cavern.dmm"
 
 	#define USING_MAP_DATUM /datum/map/valSal_port
 

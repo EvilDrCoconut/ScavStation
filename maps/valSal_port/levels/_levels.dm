@@ -68,7 +68,7 @@
 	)
 	submap_budget = 5
 	submap_category = MAP_TEMPLATE_CATEGORY_SH_GRASSLAND
-	submap_area = /area/valSal_port/outside/poi
+//	submap_area = /area/valSal_port/outside/poi
 
 	mobs_to_spawn = list(
 		list(
@@ -96,8 +96,8 @@
 		/datum/random_map/noise/forage/valSal_port/swamp
 	)
 	submap_budget = 5
-	submap_category = MAP_TEMPLATE_CATEGORY_SH_SWAMP
-	submap_area = /area/valSal_port/outside/swamp/poi
+	//submap_category = MAP_TEMPLATE_CATEGORY_SH_SWAMP
+	//submap_area = /area/valSal_port/outside/swamp/poi
 
 	mobs_to_spawn = list(
 		list(

@@ -27,6 +27,9 @@
 	name = "Woodlands"
 	sound_env = FOREST
 
+/area/valSal_port/outside/beach
+	name = "Beachside"
+
 /area/valSal_port/enclave
 	name = "Zhe Enclave"
 
