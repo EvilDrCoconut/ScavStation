@@ -28,7 +28,7 @@
 	credit_sound = list(
 		'sound/music/Miris-Magic-Dance.ogg'
 	)
-	game_year = -914 // in 2024, the year should be 1110, roughly a century after the fall of the Imperial Aegis
+	game_year = -666 // in 2025, the year should be around 1359, the setting of the Out of Placers Web Comic by ValSalian
 
 	char_preview_bgstate_options = list(
 		"000",

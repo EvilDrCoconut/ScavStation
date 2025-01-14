@@ -56,6 +56,7 @@
 	#include "valSal_port-town.dmm"
 	#include "valSal_port-enclave.dmm"
 	#include "valSal_port-cavern.dmm"
+	#include "valSal_port-bog.dmm"
 
 	#define USING_MAP_DATUM /datum/map/valSal_port
 
