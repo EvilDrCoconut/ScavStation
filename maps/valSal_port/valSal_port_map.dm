@@ -13,9 +13,9 @@
 		/decl/state/weather/snow/heavy,
 		/decl/state/weather/snow
 	)
-	var/datum/level_data/shadyhills = SSmapping.levels_by_id["valSal_port_grassland"]
-	if(istype(shadyhills)) // if this is false, something has badly exploded
-		SSweather.setup_weather_system(shadyhills, banned_states = banned_weather)
+	var/datum/level_data/valsalport = SSmapping.levels_by_id["valSal_port_town"]
+	if(istype(valsalport)) // if this is false, something has badly exploded
+		SSweather.setup_weather_system(valsalport, banned_states = banned_weather)
 
 /decl/spawnpoint/arrivals
 	name = "Queens' Road"
