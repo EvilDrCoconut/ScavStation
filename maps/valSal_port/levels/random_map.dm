@@ -1,5 +1,5 @@
 /datum/random_map/automata/cave_system/valSal_port
-	descriptor          = "Shaded Hills caves"
+	descriptor          = "ValSalian Port caves"
 	floor_type          = /turf/floor/rock/basalt
 	wall_type           = /turf/wall/natural/basalt/valSal_port
 	sparse_mineral_turf = /turf/wall/natural/random/basalt/valSal_port
@@ -12,7 +12,7 @@
 	target_turf_type = /turf/unsimulated/mask
 
 /datum/random_map/noise/valSal_port/swamp
-	descriptor           = "Shaded Hills swamp"
+	descriptor           = "ValSalian Port Bog"
 
 /datum/random_map/noise/valSal_port/swamp/get_appropriate_path(var/value)
 	value = noise2value(value)
@@ -25,7 +25,7 @@
 	return /turf/floor/grass
 
 /datum/random_map/noise/valSal_port/woods
-	descriptor = "Shaded Hills Woods"
+	descriptor = "ValSalian Port Woods"
 
 /datum/random_map/noise/valSal_port/woods/get_appropriate_path(var/value)
 	value = noise2value(value)

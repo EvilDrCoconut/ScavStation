@@ -59,12 +59,13 @@
 	name = "ValSalian Port - Town"
 	level_id = "valSal_port_town"
 	level_generators = list(
-		/datum/random_map/automata/cave_system/valSal_port,
 		/datum/random_map/noise/ore/poor,
-		/datum/random_map/noise/forage/valSal_port/grassland
+		/datum/random_map/noise/valSal_port/woods,
+		/datum/random_map/noise/forage/valSal_port/woods
 	)
 	connected_levels = list(
 		"valSal_port_enclave"     = NORTH,
+		"valsal_port_caves" = WEST
 	)
 	submap_budget = 5
 	submap_category = MAP_TEMPLATE_CATEGORY_SH_GRASSLAND
@@ -89,11 +90,13 @@
 	name = "ValSalian Port - Enclave"
 	level_id = "valSal_port_enclave"
 	connected_levels = list(
-		"valSal_port_town" = SOUTH
+		"valSal_port_town" = SOUTH,
+		"valsal_port_wilderness" = WEST
 	)
 	level_generators = list(
-		/datum/random_map/noise/valSal_port/swamp,
-		/datum/random_map/noise/forage/valSal_port/swamp
+		/datum/random_map/noise/ore/poor,
+		/datum/random_map/noise/valSal_port/woods,
+		/datum/random_map/noise/forage/valSal_port/woods
 	)
 	submap_budget = 5
 	//submap_category = MAP_TEMPLATE_CATEGORY_SH_SWAMP
@@ -126,8 +129,86 @@
 		)
 	)
 
+
+/datum/level_data/player_level/valSal_port/caves
+	name = "ValSalian Port - Caves"
+	level_id = "valSal_port_caves"
+	connected_levels = list(
+		"valSal_port_town" = EAST,
+		"valsal_port_wilderness" = NORTH
+	)
+	level_generators = list(
+		/datum/random_map/automata/cave_system/valSal_port,
+	)
+	submap_budget = 5
+	//submap_category = MAP_TEMPLATE_CATEGORY_SH_SWAMP
+	//submap_area = /area/valSal_port/outside/swamp/poi
+
+	mobs_to_spawn = list(
+		list(
+			list(
+				/mob/living/simple_animal/passive/mouse        = 6,
+				/mob/living/simple_animal/passive/rabbit       = 2,
+				/mob/living/simple_animal/passive/rabbit/brown = 2,
+				/mob/living/simple_animal/passive/rabbit/black = 2,
+			),
+			/turf/floor/grass,
+			5
+		),
+		list(
+			list(
+				/mob/living/simple_animal/frog                 = 3,
+				/mob/living/simple_animal/frog/brown           = 2,
+			),
+			/turf/floor/mud,
+			10
+		)
+	)
+
+/datum/level_data/player_level/valSal_port/wilderness
+	name = "ValSalian Port - wilderness"
+	level_id = "valSal_port_wilderness"
+	connected_levels = list(
+		"valSal_port_enclave" = EAST,
+		"valsal_port_caves" = SOUTH
+	)
+	level_generators = list(
+		/datum/random_map/noise/ore/poor,
+		/datum/random_map/noise/valSal_port/woods,
+		/datum/random_map/noise/forage/valSal_port/woods
+	)
+	submap_budget = 5
+	//submap_category = MAP_TEMPLATE_CATEGORY_SH_SWAMP
+	//submap_area = /area/valSal_port/outside/swamp/poi
+
+	mobs_to_spawn = list(
+		list(
+			list(
+				/mob/living/simple_animal/passive/mouse        = 4,
+			),
+			/turf/floor/grass,
+			5
+		),
+		list(
+			list(
+				/mob/living/simple_animal/frog                 = 5,
+				/mob/living/simple_animal/frog/brown           = 3,
+				/mob/living/simple_animal/frog/yellow          = 3,
+				/mob/living/simple_animal/frog/purple          = 2
+			),
+			/turf/floor/mud,
+			10
+		)
+	)
+
 /obj/abstract/level_data_spawner/valSal_port_town
 	level_data_type = /datum/level_data/player_level/valSal_port/town
 
 /obj/abstract/level_data_spawner/valSal_port_enclave
 	level_data_type = /datum/level_data/player_level/valSal_port/enclave
+
+/obj/abstract/level_data_spawner/valSal_port_caves
+	level_data_type = /datum/level_data/player_level/valSal_port/caves
+
+/obj/abstract/level_data_spawner/valSal_port_wilderness
+	level_data_type = /datum/level_data/player_level/valSal_port/wilderness
