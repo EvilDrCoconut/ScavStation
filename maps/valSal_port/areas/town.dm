@@ -24,10 +24,10 @@
 /area/valSal_port/outside/beach
 	name = "Beachside"
 
-/area/valSal_port/town/outside/inner_town
+/area/valSal_port/outside/inner_town
 	name = "Val Salian Port"
 
-/area/valSal_port/town/outside/outer_town
+/area/valSal_port/outside/outer_town
 	name = "Val Salian Outer Port"
 
 /area/valSal_port/town/general_store

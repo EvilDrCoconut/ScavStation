@@ -30,6 +30,9 @@
 /area/valSal_port/outside/beach
 	name = "Beachside"
 
+/area/valSal_port/outside/enclave
+	name = "Zhe Enclave"
+
 /area/valSal_port/enclave
 	name = "Zhe Enclave"
 
