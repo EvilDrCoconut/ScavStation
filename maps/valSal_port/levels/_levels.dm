@@ -64,8 +64,8 @@
 		/datum/random_map/noise/forage/valSal_port/woods
 	)
 	connected_levels = list(
-		"valSal_port_enclave"     = NORTH,
-		"valsal_port_caves" = WEST
+		"valSal_port_enclave" = NORTH,
+		"valSal_port_cavern" = WEST
 	)
 	submap_budget = 5
 	submap_category = MAP_TEMPLATE_CATEGORY_SH_GRASSLAND
@@ -91,7 +91,7 @@
 	level_id = "valSal_port_enclave"
 	connected_levels = list(
 		"valSal_port_town" = SOUTH,
-		"valsal_port_wilderness" = WEST
+		"valSal_port_wilderness" = WEST
 	)
 	level_generators = list(
 		/datum/random_map/noise/ore/poor,
@@ -130,12 +130,12 @@
 	)
 
 
-/datum/level_data/player_level/valSal_port/caves
-	name = "ValSalian Port - Caves"
-	level_id = "valSal_port_caves"
+/datum/level_data/player_level/valSal_port/cavern
+	name = "ValSalian Port - Cavern"
+	level_id = "valSal_port_cavern"
 	connected_levels = list(
 		"valSal_port_town" = EAST,
-		"valsal_port_wilderness" = NORTH
+		"valSal_port_wilderness" = NORTH
 	)
 	level_generators = list(
 		/datum/random_map/automata/cave_system/valSal_port,
@@ -169,8 +169,8 @@
 	name = "ValSalian Port - wilderness"
 	level_id = "valSal_port_wilderness"
 	connected_levels = list(
-		"valSal_port_enclave" = EAST,
-		"valsal_port_caves" = SOUTH
+		"valSal_port_cavern" = SOUTH,
+		"valSal_port_enclave" = EAST
 	)
 	level_generators = list(
 		/datum/random_map/noise/ore/poor,
@@ -201,14 +201,42 @@
 		)
 	)
 
+/datum/level_data/player_level/valSal_port/undertown
+	name = "ValSalian Port - undertown"
+	level_id = "valSal_port_undertown"
+	connected_levels = list(
+		"valSal_port_underground" = WEST
+	)
+	level_generators = list(
+		/datum/random_map/noise/ore/rich
+	)
+
+/datum/level_data/player_level/valSal_port/underground
+	name = "ValSalian Port - underground"
+	level_id = "valSal_port_underground"
+	connected_levels = list(
+		"valSal_port_undertown" = EAST
+	)
+	level_generators = list(
+		/datum/random_map/automata/cave_system/valSal_port,
+		/datum/random_map/noise/ore/rich
+	)
+
 /obj/abstract/level_data_spawner/valSal_port_town
 	level_data_type = /datum/level_data/player_level/valSal_port/town
 
 /obj/abstract/level_data_spawner/valSal_port_enclave
 	level_data_type = /datum/level_data/player_level/valSal_port/enclave
 
-/obj/abstract/level_data_spawner/valSal_port_caves
-	level_data_type = /datum/level_data/player_level/valSal_port/caves
+/obj/abstract/level_data_spawner/valSal_port_cavern
+	level_data_type = /datum/level_data/player_level/valSal_port/cavern
+
 
 /obj/abstract/level_data_spawner/valSal_port_wilderness
 	level_data_type = /datum/level_data/player_level/valSal_port/wilderness
+
+/obj/abstract/level_data_spawner/valSal_port_undertown
+	level_data_type = /datum/level_data/player_level/valSal_port/undertown
+
+/obj/abstract/level_data_spawner/valSal_port_underground
+	level_data_type = /datum/level_data/player_level/valSal_port/underground

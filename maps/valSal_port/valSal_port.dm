@@ -52,13 +52,18 @@
 	#include "valSal_port_testing.dm"
 	#include "valSal_port_turfs.dm"
 
-	// Other levels are lateral and compile order doesn't matter.
-	#include "valSal_port-cavern.dmm"
-	//#include "valSal_port-wilderness.dmm"
+	// undertown are below town and must be compiled in that order for multiz.
 
+	#include "valSal_port-undertown.dmm"
 	#include "valSal_port-town.dmm"
-	#include "valSal_port-enclave.dmm"
 
+	// underground are below cavern and must be compiled in that order for multiz.
+	#include "valSal_port-underground.dmm"
+	#include "valSal_port-cavern.dmm"
+
+	// Other levels are lateral and compile order doesn't matter.
+	#include "valSal_port-wilderness.dmm"
+	#include "valSal_port-enclave.dmm"
 
 	#define USING_MAP_DATUM /datum/map/valSal_port
 
